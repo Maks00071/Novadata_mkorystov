@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS public.users_audit(
 
 -- IS DISTINCT FROM (аналог <>, но позволяет корректно обрабатывать NULL-значения), 
 -- но на больших объемах не эффективно, т.к. не использует индексы!
-DROP FUNCTION IF EXISTS ublic.log_user_update CASCADE;
+DROP FUNCTION IF EXISTS public.log_user_update CASCADE;
 
 CREATE OR REPLACE FUNCTION public.log_user_update()
 RETURNS TRIGGER 
